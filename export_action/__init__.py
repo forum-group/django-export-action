@@ -1,1 +1,1 @@
-__version__ = '0.1.1'
+default_app_config = 'export_action.apps.ExportActionConfig'
