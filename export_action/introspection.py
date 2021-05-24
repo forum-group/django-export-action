@@ -5,8 +5,11 @@ from __future__ import unicode_literals, absolute_import
 from itertools import chain
 
 from django.contrib.contenttypes.models import ContentType
-from django.db.models.fields import FieldDoesNotExist
-
+try:
+    from django.db.models.fields import FieldDoesNotExist
+except:
+    from django.core.exceptions import FieldDoesNotExist
+    
 
 def _get_field_by_name(model_class, field_name):
     """
